@@ -1,3 +1,10 @@
+etckeeper (1.18.8-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #850679)
+  * Revert port to py3, requires bzrlib to port first (Closes: #906000)
+
+ -- Antoine Beaupré <anarcat@debian.org>  Tue, 21 Aug 2018 12:27:05 -0400
+
 etckeeper (1.18.8) unstable; urgency=medium
 
   * Work around git commit's lack of robustness, by providing
