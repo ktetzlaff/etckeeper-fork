@@ -17,7 +17,8 @@ understand the basics of working with version control.
 
 [[!sidebar content="""
 [[README]]  
-[[install]]  
-[[news]]  
-[[todo]]  
+[[Install]]  
+[[News]]  
+[[Todo]]  
+[[Forum]]  
 """]]
