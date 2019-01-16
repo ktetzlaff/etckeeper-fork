@@ -1,3 +1,25 @@
+etckeeper (1.18.10-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Antoine Beaupré <anarcat@debian.org>  Wed, 16 Jan 2019 13:51:37 -0500
+
+etckeeper (1.18.10) unstable; urgency=medium
+
+  * Avoid post-install failing when ps is from busybox or another
+    version not supporting procps-specific options.
+  * Use ps --no-headers rather than problimatic -h option.
+
+ -- Joey Hess <id@joeyh.name>  Sun, 23 Dec 2018 13:05:44 -0400
+
+etckeeper (1.18.9) unstable; urgency=medium
+
+  * When run during a package installation, include in the commit
+    message the command line that caused etckeeper to run.
+    Thanks, Laszlo Gombos
+
+ -- Joey Hess <id@joeyh.name>  Wed, 12 Dec 2018 01:01:05 -0400
+
 etckeeper (1.18.8-1) unstable; urgency=medium
 
   * New upstream release (Closes: #850679)
