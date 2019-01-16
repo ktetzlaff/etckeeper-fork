@@ -1,6 +1,7 @@
 etckeeper (1.18.10-1) unstable; urgency=medium
 
   * New upstream release
+  * update debhelper and standards version, no change
 
  -- Antoine Beaupré <anarcat@debian.org>  Wed, 16 Jan 2019 13:51:37 -0500
 

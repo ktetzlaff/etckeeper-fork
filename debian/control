@@ -1,7 +1,7 @@
 Source: etckeeper
 Section: admin
 Priority: optional
-Build-Depends: debhelper (>= 10~),
+Build-Depends: debhelper-compat (= 11),
                bats,
                bzr (>= 1.5~),
                dh-python,
@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 10~),
                git,
                python,
 Maintainer: Antoine Beaupré <anarcat@debian.org>
-Standards-Version: 4.2.0
+Standards-Version: 4.3.0
 Vcs-Git: https://git.joeyh.name/git/etckeeper.git
 Vcs-Browser: https://git.joeyh.name/index.cgi/etckeeper.git/
 Homepage: https://etckeeper.branchable.com/
