@@ -3,11 +3,7 @@
 export PYTHON_INSTALL_OPTS=--install-layout=deb
 
 %:
-	dh $@ --with python2
+	dh $@
 
 override_dh_installdocs:
 	dh_installdocs -X.gitignore
-
-override_dh_auto_install:
-	dh_auto_install
-	rm debian/etckeeper/usr/lib/python2.7/dist-packages/bzrlib/plugins/etckeeper/__init__.pyc
