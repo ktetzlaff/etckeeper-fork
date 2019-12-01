@@ -1,9 +1,13 @@
 etckeeper (1.18.12-1) unstable; urgency=medium
 
+  [ Antoine Beaupré ]
   * New upstream release.
   * remove explicit Python dependency (Closes: #921447)
 
- -- Antoine Beaupré <anarcat@debian.org>  Sun, 01 Dec 2019 15:05:07 -0500
+  [ Nicolas Braud-Santoni ]
+  * debian/control: Point Vcs-Git to the correct branch (Closes: #942409)
+
+ -- Antoine Beaupré <anarcat@debian.org>  Sun, 01 Dec 2019 15:08:30 -0500
 
 etckeeper (1.18.12) unstable; urgency=medium
 
