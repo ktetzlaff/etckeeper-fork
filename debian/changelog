@@ -1,9 +1,26 @@
 etckeeper (1.18.14-1) unstable; urgency=medium
 
+  [ Antoine Beaupré ]
   * New upstream release.
   * debian/patches/fix-sh-syntax.diff: drop, merged in 1.18.13
+  * merge NMU 1.18.10-1.1 I forgot, below
 
- -- Antoine Beaupré <anarcat@debian.org>  Mon, 04 May 2020 13:21:23 -0400
+  [ Mattia Rizzolo ]
+  * Import patches from Ubuntu (Closes: #928177):
+    + Use a UTF-8 encoding, to ensure stable sorting.
+    + Add a Breezy plugin, using Python3.
+  * Replace bzr dependencies with brz (bzr is now a transitional package).
+  * d/control:
+    + Bump Standards-Version to 4.4.1, no changes needed.
+    + Set Rules-Requires-Root: no.
+    + Drop Conflicts against a very old version of bzr.
+    + Drop version requirements against very old versions, all satisfied
+      in oldoldstable.
+    + Bump debhelper compat level to 12.
+  * Build using Python3 instead of Python2 (Closes: #811180, #921447)
+    (This stops installing the bzr plugin, instead installing the brz one).
+
+ -- Antoine Beaupré <anarcat@debian.org>  Mon, 04 May 2020 13:32:38 -0400
 
 etckeeper (1.18.14) unstable; urgency=medium
 
