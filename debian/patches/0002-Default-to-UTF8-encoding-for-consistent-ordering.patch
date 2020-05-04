@@ -1,0 +1,35 @@
+From 10d74939aeff32d6638b905ec248ccd6f37fe512 Mon Sep 17 00:00:00 2001
+From: Dimitri John Ledkov <xnox@ubuntu.com>
+Date: Mon, 29 Apr 2019 14:11:51 +0100
+Subject: [PATCH 2/3] Default to UTF8 encoding, for consistent ordering
+
+---
+ debian/changelog              | 1 +
+ etckeeper                     | 4 ++++
+ pre-commit.d/30store-metadata | 2 +-
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+
+--- a/etckeeper
++++ b/etckeeper
+@@ -54,6 +54,10 @@
+ if [ ! -z "$AVOID_SPECIAL_FILE_WARNING" ]; then
+ 	export AVOID_SPECIAL_FILE_WARNING
+ fi
++if [ -z "en_GB.UTF-8" ]; then
++	# Default to UTF8 encoding, if unset
++	export LANG=C.UTF-8
++fi
+ 
+ if [ ! -z "$PUSH_REMOTE" ]; then
+ 	export PUSH_REMOTE
+--- a/pre-commit.d/30store-metadata
++++ b/pre-commit.d/30store-metadata
+@@ -2,7 +2,7 @@
+ set -e
+ 
+ # Make sure sort always sorts in same order.
+-LANG=C
++LANG=C.UTF-8
+ export LANG
+ 
+ filter_ignore() {
