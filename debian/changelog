@@ -1,7 +1,7 @@
 etckeeper (1.18.14-1) unstable; urgency=medium
 
   [ Antoine Beaupré ]
-  * New upstream release.
+  * New upstream release (Closes: #884987)
   * debian/patches/fix-sh-syntax.diff: drop, merged in 1.18.13
   * merge NMU 1.18.10-1.1 I forgot, below
 
