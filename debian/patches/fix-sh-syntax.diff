@@ -1,0 +1,19 @@
+# DP: fix #946055 by reimplementing in portable shell
+# DP: also fixes issues with echo -n, -c, and backslashes
+
+--- a/commit.d/50vcs-commit
++++ b/commit.d/50vcs-commit
+@@ -12,10 +12,9 @@ if [ -n "$1" ]; then
+ 	if [ "x$1" = "x--stdin" ]; then
+ 		cat > "$logfile"
+ 	else
+-		if [ "x$1" = "x-m" ]; then
+-			shift 1
+-		fi
+-		echo "${@#-m}" > "$logfile"
++		sed '1s/^-m \{0,1\}//' >"$logfile" <<-EOF
++			$*
++		EOF
+ 	fi
+ else
+ 	logfile=""
