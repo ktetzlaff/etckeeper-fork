@@ -15,7 +15,7 @@ Subject: [PATCH 2/3] Default to UTF8 encoding, for consistent ordering
  if [ ! -z "$AVOID_SPECIAL_FILE_WARNING" ]; then
  	export AVOID_SPECIAL_FILE_WARNING
  fi
-+if [ -z "en_GB.UTF-8" ]; then
++if [ -z "$LANG" ]; then
 +	# Default to UTF8 encoding, if unset
 +	export LANG=C.UTF-8
 +fi
