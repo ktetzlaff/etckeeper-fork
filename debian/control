@@ -11,8 +11,8 @@ Build-Depends: debhelper-compat (= 12),
 Maintainer: Antoine Beaupré <anarcat@debian.org>
 Standards-Version: 4.4.1
 Rules-Requires-Root: no
-Vcs-Git: https://git.joeyh.name/git/etckeeper.git -b debian
-Vcs-Browser: https://git.joeyh.name/index.cgi/etckeeper.git/
+Vcs-Git: https://salsa.debian.org/debian/etckeeper.git
+Vcs-Browser: https://salsa.debian.org/debian/etckeeper
 Homepage: https://etckeeper.branchable.com/
 
 Package: etckeeper
