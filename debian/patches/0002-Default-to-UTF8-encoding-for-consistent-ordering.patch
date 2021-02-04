@@ -9,9 +9,11 @@ Subject: [PATCH 2/3] Default to UTF8 encoding, for consistent ordering
  pre-commit.d/30store-metadata | 2 +-
  3 files changed, 6 insertions(+), 1 deletion(-)
 
---- a/etckeeper
-+++ b/etckeeper
-@@ -54,6 +54,10 @@
+Index: b/etckeeper
+===================================================================
+--- a/etckeeper	2021-02-04 16:57:16.713224324 -0500
++++ b/etckeeper	2021-02-04 16:57:16.713224324 -0500
+@@ -54,6 +54,10 @@ fi
  if [ ! -z "$AVOID_SPECIAL_FILE_WARNING" ]; then
  	export AVOID_SPECIAL_FILE_WARNING
  fi
@@ -22,14 +24,3 @@ Subject: [PATCH 2/3] Default to UTF8 encoding, for consistent ordering
  
  if [ ! -z "$PUSH_REMOTE" ]; then
  	export PUSH_REMOTE
---- a/pre-commit.d/30store-metadata
-+++ b/pre-commit.d/30store-metadata
-@@ -2,7 +2,7 @@
- set -e
- 
- # Make sure sort always sorts in same order.
--LANG=C
-+LANG=C.UTF-8
- export LANG
- 
- filter_ignore() {
