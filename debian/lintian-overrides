@@ -4,3 +4,5 @@ etckeeper: no-debconf-config
 etckeeper: command-with-path-in-maintainer-script prerm:24 /usr/bin/etckeeper
 # we follow the upstream changelog
 etckeeper: possible-new-upstream-release-without-new-version
+# Python is optional
+etckeeper: python-package-missing-depends-on-python

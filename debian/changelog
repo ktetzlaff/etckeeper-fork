@@ -1,6 +1,7 @@
 etckeeper (1.18.17-1) unstable; urgency=medium
 
   * new upstream release
+  * drop forced Python dependency (#984832)
 
  -- Antoine Beaupré <anarcat@debian.org>  Thu, 31 Mar 2022 11:48:25 -0400
 
