@@ -19,7 +19,6 @@ Package: etckeeper
 Architecture: all
 Depends: git | mercurial | brz | darcs,
          ${misc:Depends},
-         ${python3:Depends},
 Recommends: cron-daemon
 Suggests: sudo
 Description: store /etc in git, mercurial, brz or darcs
