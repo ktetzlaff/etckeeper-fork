@@ -1,3 +1,9 @@
+etckeeper (1.18.17-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Antoine Beaupré <anarcat@debian.org>  Thu, 31 Mar 2022 11:48:25 -0400
+
 etckeeper (1.18.16-1) unstable; urgency=medium
 
   * new upstream release
