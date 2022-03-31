@@ -1,3 +1,14 @@
+etckeeper (1.18.17) upstream; urgency=medium
+
+  * Fix committing of files with spaces in name when perl is not available.
+    Thanks, Henrik Riomar
+  * Ignore udev's FHS violating large binary cache file /etc/udev/hwdb.bin
+  * Avoid warning messages from grep about binary files when there are
+    filenames in /etc that do not correspond to the current locale settings.
+    Thanks, thm
+
+ -- Joey Hess <id@joeyh.name>  Fri, 07 Jan 2022 11:15:07 -0400
+
 etckeeper (1.18.16) upstream; urgency=medium
 
   * Improve sorting stability.
