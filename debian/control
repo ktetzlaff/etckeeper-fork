@@ -1,7 +1,7 @@
 Source: etckeeper
 Section: admin
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                bats,
                bzr,
                dh-python,
