@@ -1,7 +1,7 @@
 Source: etckeeper
 Section: admin
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                bats,
                bzr,
                dh-python,
@@ -9,7 +9,7 @@ Build-Depends: debhelper-compat (= 12),
                git,
                python3:any,
 Maintainer: Antoine Beaupré <anarcat@debian.org>
-Standards-Version: 4.4.1
+Standards-Version: 4.6.1
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/debian/etckeeper.git
 Vcs-Browser: https://salsa.debian.org/debian/etckeeper

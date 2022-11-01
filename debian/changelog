@@ -90,7 +90,7 @@ etckeeper (1.18.12) unstable; urgency=medium
 
 etckeeper (1.18.11) unstable; urgency=medium
 
-  * Support platforms without a hostname command, fall back to 
+  * Support platforms without a hostname command, fall back to
     reading /etc/hostname.
     Thanks, Chris Morgan
   * commit: Support -mmessage, without a space, since eg git commit
