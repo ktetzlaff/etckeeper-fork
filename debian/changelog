@@ -1,3 +1,16 @@
+etckeeper (1.18.20-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Remove 1 obsolete maintscript entry.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Antoine Beaupré ]
+  * new upstream release
+
+ -- Antoine Beaupré <anarcat@debian.org>  Thu, 26 Jan 2023 14:53:08 -0500
+
 etckeeper (1.18.18-1) unstable; urgency=medium
 
   * new upstream release (Closes: #1019319)
