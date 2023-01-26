@@ -1,0 +1,18 @@
+Description: fix version number
+ etckeeper has an automatic version fix
+Author: Antoine Beaupré <anarcat@debian.org>
+Origin: debian
+Forwarded: not-needed
+Last-Update: 2023-01-26
+
+--- etckeeper-1.18.20.orig/etckeeper
++++ etckeeper-1.18.20/etckeeper
+@@ -75,7 +75,7 @@ elif [ "x$1" = "x-h" ] || [ "x$1" = "x--
+ 	exit 0
+ elif [ "x$1" = "x-v" ] || [ "x$1" = "x--version" ]; then
+ 	# This is automatically updated by the Makefile.
+-	echo "Version: 1.18.18"
++	echo "Version: 1.18.20"
+ 	exit 0
+ fi
+ command="$1"
