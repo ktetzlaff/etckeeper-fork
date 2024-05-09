@@ -1,0 +1,62 @@
+Hi,
+
+I'm using macOS (and the iTerm2 terminal emulator) to ssh to a raspberry pi that has Ubuntu 24.04, running the zsh shell.
+
+Whenever I run etckeeper commit (or when it happens implicitly via sudo apt install ...)
+
+I get the following warnings multiple times.
+
+```
+$ sudo etckeeper commit
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = "en_US.UTF-8",
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LC_COLLATE = "C",
+	LC_TERMINAL = "iTerm2",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = "en_US.UTF-8",
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LC_COLLATE = "C",
+	LC_TERMINAL = "iTerm2",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+[master 82468a9] test 2
+```
+
+My .zshrc exports
+```
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+```
+
+My env contains 
+```
+LC_TERMINAL=iTerm2
+LC_CTYPE=UTF-8
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+```
+
+I noticed that /etc/etckeeper/pre-commit.d/30store-metadata contains the following lines of code.
+
+```
+LC_COLLATE=C
+export LC_COLLATE
+unset LC_ALL
+```
+
+If I comment the code out, the warnings disappears. I assume the statements are needed for a reason though.
+
+I'm not really familiar with locale interactions, so i'm not sure if my config is wrong or it's something that etckeeper doesn't expect.
+
+Would anyone be able to share some advice how I could stop the warnings from happening? Thanks.
