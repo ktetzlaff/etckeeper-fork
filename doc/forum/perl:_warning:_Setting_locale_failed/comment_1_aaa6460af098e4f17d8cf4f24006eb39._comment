@@ -1,0 +1,11 @@
+[[!comment format=mdwn
+ username="weirdhazel"
+ avatar="http://cdn.libravatar.org/avatar/1780f57494741365e3606ee0226a3ef4"
+ subject="comment 1"
+ date="2024-05-09T11:03:13Z"
+ content="""
+I think I figured it out.
+
+This seems to happen because iTerm2 sends the local locale env vars to the remote host
+and LC_CTYPE = \"UTF-8\" is not a valid locale on Linux.
+"""]]
