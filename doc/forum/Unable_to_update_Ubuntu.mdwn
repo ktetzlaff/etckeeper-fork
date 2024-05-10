@@ -1,0 +1,15 @@
+The operating system fails to make the proper updates:
+
+    /etc/etckeeper/unclean.d/README: 1: Files: not found
+    /etc/etckeeper/unclean.d/README: 2: uncommitted: not found
+    /etc/etckeeper/pre-install.d/README: 1: Files: not found
+    /etc/etckeeper/pre-install.d/README: 2: etc.: not found
+    /etc/etckeeper/pre-install.d/README: 3: uncommitted: not found
+    E: Problem executing scripts DPkg::Pre-Invoke 'if [ -x /usr/bin/etckeeper ]; then etckeeper pre-install; fi'
+    E: Sub-process returned an error code
+
+I have disabled the services *etckeeper.service* and *etckeeper.timer* and tried to uninstall but that error persist.
+
+Can you please assist me to fix the bug?
+
+Thank you in advance.
