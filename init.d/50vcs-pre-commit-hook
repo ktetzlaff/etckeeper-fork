@@ -3,6 +3,10 @@ set -e
 
 case "$VCS" in
 	git)
+		if git rev-parse --git-dir | grep -q '/.git/worktrees/'; then
+			# Inside worktree, do nothing.
+			exit 0
+		fi
 		if [ -x .git/hooks/pre-commit ]; then
 			if ! grep -q "etckeeper pre-commit" .git/hooks/pre-commit; then
 				echo "etckeeper warning: .git/hooks/pre-commit needs to be manually modified to run: etckeeper pre-commit -d `pwd`" >&2
